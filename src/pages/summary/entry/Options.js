@@ -10,7 +10,9 @@ const Options = ({ optionType }) => {
     axios
       .get(`http://localhost:3030/${optionType}`)
       .then((response) => setItems(response.data))
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error);
+      });
   }, [optionType]);
   const ItemComponent = optionType === 'scoops' ? ScoopOption : ToppingsOption;
 

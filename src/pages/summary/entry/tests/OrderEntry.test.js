@@ -15,7 +15,6 @@ test.only('handles error for scoops and toppings', async () => {
   render(<OrderEntry />);
   await waitFor(async () => {
     const alerts = await screen.findAllByRole('alert');
-
     expect(alerts).toHaveLength(2);
   });
 });

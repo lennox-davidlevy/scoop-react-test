@@ -22,7 +22,7 @@ const Options = ({ optionType }) => {
   if (error) {
     return <AlertBanner />;
   }
-
+  // logic
   const ItemComponent = optionType === 'scoops' ? ScoopOption : ToppingsOption;
   const title = optionType[0].toUpperCase() + optionType.slice(1).toLowerCase();
 
